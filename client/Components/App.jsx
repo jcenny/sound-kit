@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { sampleSounds } from '../sampleSounds.js';
 import Keyboard from './Keyboard.jsx';
+import styled, { createGlobalStyle } from 'styled-components';
 
+const GlobalStyle = createGlobalStyle`
+  *:focus {
+    outline: none;
+  }
+
+  body {
+    background-color: #8c0dfa;
+    font-family: 'Work Sans', sans-serif;
+  }
+`;
 const App = () => {
   const [keys, setKeys] = useState([]);
   
@@ -23,7 +34,9 @@ const App = () => {
   // })
 
   return (
-    <div>
+    <div style={{height: '650px'}}>
+      <GlobalStyle/>
+      <h1 style={{textAlign: 'center', color: 'white', letterSpacing: '5px', fontSize: '40px'}}>sound kit</h1>
       {keys.map((set) => {
         let { key, sound } = set;
         return (

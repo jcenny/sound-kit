@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 const KeyboardContainer = styled.div`
+position: relative;
+top: 40%;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
@@ -11,7 +13,6 @@ height: 325px;
 const Row = styled.div`
 width: ${({ width }) => width};
 height: 25%;
-background-color: red;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
@@ -19,9 +20,12 @@ align-items: center;
 `
 
 const Key = styled.div`
-width: 60px;
+width: ${({ width }) => width || '60px'};
 height: 75%;
-background-color: blue;
+border: 1px solid white;
+border-radius: 5px;
+text-align: center;
+color: white;
 `
 
 export {
