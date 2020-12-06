@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 align-items: center;
-height: 300px;
+height: 325px;
 `
 
 const Row = styled.div`
@@ -19,8 +19,8 @@ align-items: center;
 `
 
 const Key = styled.div`
-width: 7%;
-height: 70%;
+width: 60px;
+height: 75%;
 background-color: blue;
 `
 

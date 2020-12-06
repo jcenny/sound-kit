@@ -5,7 +5,7 @@ import { KeyboardContainer, Row, Spacebar, Key, } from './Styles/AppStyles.jsx';
 const Keyboard = () => {
   return (
     <KeyboardContainer>
-      <Row width={'85%'}>
+      <Row width={'65%'}>
         <Key></Key>
         <Key></Key>
         <Key></Key>
@@ -19,7 +19,7 @@ const Keyboard = () => {
         <Key></Key>
         <Key></Key>
       </Row>
-      <Row width={'72%'}>
+      <Row width={'60%'}>
       <Key></Key>
         <Key></Key>
         <Key></Key>
@@ -32,7 +32,7 @@ const Keyboard = () => {
         <Key></Key>
         <Key></Key>
       </Row>
-      <Row width={'71%'}>
+      <Row width={'55%'}>
       <Key></Key>
         <Key></Key>
         <Key></Key>
@@ -44,7 +44,7 @@ const Keyboard = () => {
         <Key></Key>
         <Key></Key>
       </Row>
-      <Row width={'50%'}>
+      <Row width={'30%'}>
         <Key></Key>
       </Row>
     </KeyboardContainer>
