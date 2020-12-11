@@ -45,7 +45,7 @@ const Keyboard = () => {
         <Key>/</Key>
       </Row>
       <Row width={'30%'}>
-        <Key width={'400px'}>spacebar</Key>
+        <Key width={'400px'}>⎵</Key>
       </Row>
     </KeyboardContainer>
   )
