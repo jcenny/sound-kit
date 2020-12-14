@@ -1,22 +1,22 @@
 import React from 'react';
-import { KeyboardContainer, Row, Spacebar, Key, } from './Styles/AppStyles.jsx';
+import { KeyboardContainer, RowContainer } from './Styles/AppStyles.jsx';
+import Key from './Key.jsx';
 
-
-const Keyboard = ({ firstRowKeys, secondRowKeys, thirdRowKeys, spacebarKey }) => {
+const Keyboard = ({ firstRowKeys, secondRowKeys, thirdRowKeys, fourthRowKeys }) => {
   return (
     <KeyboardContainer>
-      <Row width='65%'>
-        {firstRowKeys.map((set) => {
-          const { key, sound } = set;
-          return (
-            <Key data-key={key}>
-              <kbd>{key}</kbd>
-              <div> {sound.substring(0, sound.length - 4)}</div>
-              <audio data-key={key} src={`./sounds/${sound}`}></audio>
-            </Key>
-          )
-        })}
-      </Row>
+      <RowContainer width='65%'>
+        {firstRowKeys.map((set) => <Key set={set} />)}
+      </RowContainer>
+      <RowContainer width='55%'>
+        {secondRowKeys.map((set) => <Key set={set} />)}
+      </RowContainer>
+      <RowContainer width='65%'>
+        {thirdRowKeys.map((set) => <Key set={set} />)}
+      </RowContainer>
+      <RowContainer width='30%'>
+        {fourthRowKeys.map((set) => <Key width={'400px'} set={set} />)}
+      </RowContainer>
     </KeyboardContainer>
   )
   // return (

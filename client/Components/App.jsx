@@ -18,22 +18,25 @@ const App = () => {
   const [firstRowKeys, setFirstRowKeys] = useState([]);
   const [secondRowKeys, setSecondRowKeys] = useState([]);
   const [thirdRowKeys, setThirdRowKeys] = useState([]);
-  const [spacebarKey, setSpaceBarKey] = useState([]);
+  const [fourthRowKeys, setFourthRowKeys] = useState([]);
   
   const setRows = () => {
-    let firstRow = [];
-    let secondRow = [];
-    let thirdRow = [];
+    let firstRow = [],
+        secondRow = [],
+        thirdRow = [],
+        fourthRow = [];
+
     sampleSounds.forEach((sound, idx) => {
       if (idx <= 11) firstRow.push(sound);
       else if (idx <= 22) secondRow.push(sound);
       else if (idx <= 32) thirdRow.push(sound);
-      else setSpaceBarKey(sound);
+      else fourthRow.push(sound)
     })
   
     setFirstRowKeys(firstRow);
     setSecondRowKeys(secondRow);
     setThirdRowKeys(thirdRow);
+    setFourthRowKeys(fourthRow);
   }
 
   useEffect(() => {
@@ -56,7 +59,7 @@ const App = () => {
     <div style={{height: '650px'}}>
       <GlobalStyle/>
       <h1 style={{textAlign: 'center', color: 'white', letterSpacing: '5px', fontSize: '40px'}}>sound kit</h1>
-      <Keyboard firstRowKeys={firstRowKeys} secondRowKeys={secondRowKeys} thirdRowKeys={thirdRowKeys} spacebarKey={spacebarKey}/>
+      <Keyboard firstRowKeys={firstRowKeys} secondRowKeys={secondRowKeys} thirdRowKeys={thirdRowKeys} fourthRowKeys={fourthRowKeys}/>
     </div>
   )
 }

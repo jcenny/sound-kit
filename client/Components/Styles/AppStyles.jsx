@@ -10,7 +10,7 @@ align-items: center;
 height: 325px;
 `
 
-const Row = styled.div`
+const RowContainer = styled.div`
 width: ${({ width }) => width};
 height: 25%;
 display: flex;
@@ -19,8 +19,8 @@ justify-content: space-evenly;
 align-items: center;
 `
 
-const Key = styled.div`
-width: ${({ width }) => width || '60px'};
+const KeyContainer = styled.div`
+width: ${({ width }) => width};
 height: 75%;
 border: 1px solid white;
 border-radius: 5px;
@@ -30,6 +30,6 @@ color: white;
 
 export {
   KeyboardContainer,
-  Row,
-  Key,
+  RowContainer,
+  KeyContainer,
 }
