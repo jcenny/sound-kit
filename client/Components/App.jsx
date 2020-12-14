@@ -13,43 +13,50 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Work Sans', sans-serif;
   }
 `;
+
 const App = () => {
-  const [keys, setKeys] = useState([]);
+  const [firstRowKeys, setFirstRowKeys] = useState([]);
+  const [secondRowKeys, setSecondRowKeys] = useState([]);
+  const [thirdRowKeys, setThirdRowKeys] = useState([]);
+  const [spacebarKey, setSpaceBarKey] = useState([]);
   
-  // useEffect(() => {
-  //   // setKeys(sampleSounds);
+  const setRows = () => {
+    let firstRow = [];
+    let secondRow = [];
+    let thirdRow = [];
+    sampleSounds.forEach((sound, idx) => {
+      if (idx <= 11) firstRow.push(sound);
+      else if (idx <= 22) secondRow.push(sound);
+      else if (idx <= 32) thirdRow.push(sound);
+      else setSpaceBarKey(sound);
+    })
+  
+    setFirstRowKeys(firstRow);
+    setSecondRowKeys(secondRow);
+    setThirdRowKeys(thirdRow);
+  }
 
-  //   // const handleKeyPress = (e) => {
-  //   //   const audio = document.querySelector(`audio[data-key="${e.key}"]`);
-  //   //   if (!audio) return;
-  //   //   audio.currentTime = 0;
-  //   //   audio.play();
-  //   // }
+  useEffect(() => {
+    setRows();
+    const handleKeyPress = (e) => {
+      const audio = document.querySelector(`audio[data-key="${e.key}"]`);
+      if (!audio) return;
+      audio.currentTime = 0;
+      audio.play();
+    }
 
-  //   // document.addEventListener('keydown', handleKeyPress)
+    document.addEventListener('keydown', handleKeyPress)
 
-  //   // return function cleanUp () {
-  //   //   document.removeEventListener('keydown', handleKeyPress)
-  //   // }
-  // })
+    return function cleanUp () {
+      document.removeEventListener('keydown', handleKeyPress)
+    }
+  }, [])
 
   return (
     <div style={{height: '650px'}}>
       <GlobalStyle/>
       <h1 style={{textAlign: 'center', color: 'white', letterSpacing: '5px', fontSize: '40px'}}>sound kit</h1>
-      {keys.map((set) => {
-        let { key, sound } = set;
-        return (
-          <div>
-            {/* <div data-key={key}>
-              <kbd>{key.toUpperCase()}</kbd>
-              <span> {sound.substring(0, sound.length - 4)}</span>
-            </div>
-            <audio data-key={key} src={`./sounds/${sound}`}></audio> */}
-          </div>
-        )
-      })}
-      <Keyboard/>
+      <Keyboard firstRowKeys={firstRowKeys} secondRowKeys={secondRowKeys} thirdRowKeys={thirdRowKeys} spacebarKey={spacebarKey}/>
     </div>
   )
 }
