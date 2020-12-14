@@ -1,43 +1,43 @@
 const sampleSounds = [
   {
     key: 'q',
-    sound: 'glass-piano.wav'
+    sound: 'piano2.wav'
   },
   {
     key: 'w',
-    sound: 'low-slap.wav'
+    sound: 'slap.wav'
   },
   {
     key: 'e',
-    sound: 'bright-pad.wav'
+    sound: 'bright.wav'
   },
   {
     key: 'r', 
-    sound: 'harmony-pad.wav'
+    sound: 'peace.wav'
   },
   {
     key: 't', 
-    sound: 'kick-hit.wav'
+    sound: 'kick1.wav'
   },
   {
     key: 'y', 
-    sound: 'pad-echo.wav'
+    sound: 'echo.wav'
   },
   {
     key: 'u',
-    sound: 'lofi-chord.wav'
+    sound: 'chord.wav'
   },
   {
     key: 'i',
-    sound: 'density-pad.wav'
+    sound: 'density.wav'
   },
   {
     key: 'o',
-    sound: 'flute-synth.wav'
+    sound: 'flute2.wav'
   },
   {
     key: 'p', 
-    sound: 'gentle-piano.wav'
+    sound: 'piano1.wav'
   },
   {
     key: '[', 
@@ -49,15 +49,15 @@ const sampleSounds = [
   },
   {
     key: 'a',
-    sound: 'angelic-pad.wav'
+    sound: 'angelic.wav'
   },
   {
     key: 's',
-    sound: 'keys-chord.wav'
+    sound: 'keys2.wav'
   },
   {
     key: 'd', 
-    sound: 'bounce-bass.wav'
+    sound: 'bass1.wav'
   },
   {
     key: 'f', 
@@ -69,7 +69,7 @@ const sampleSounds = [
   },
   {
     key: 'h', 
-    sound: 'chopped-keys.wav'
+    sound: 'keys1.wav'
   },
   {
     key: 'j', 
@@ -77,51 +77,51 @@ const sampleSounds = [
   },
   {
     key: 'k',
-    sound: 'electric-buzz.wav'
+    sound: 'buzz.wav'
   },
   {
     key: 'l', 
-    sound: 'electric-tick.wav'
+    sound: 'tick.wav'
   },
   {
     key: ';',
-    sound: 'soft-piano.wav'
+    sound: 'piano3.wav'
   },
   {
     key: "'", 
-    sound: 'synth-cut.wav'
+    sound: 'synth2.wav'
   },
   {
     key: 'z',
-    sound: 'processed-guitar.wav'
+    sound: 'guitar.wav'
   },
   {
     key: 'x', 
-    sound: 'mid-synth.wav'
+    sound: 'synth1.wav'
   },
   {
     key: 'c',
-    sound: 'blissful-bell.wav'
+    sound: 'bell.wav'
   },
   {
     key: 'v', 
-    sound: 'low-bass.wav'
+    sound: 'bass2.wav'
   },
   {
     key: 'b', 
-    sound: 'big-clap.wav'
+    sound: 'clap.wav'
   },
   {
     key: 'n', 
-    sound: 'filter-key.wav'
+    sound: 'keys3.wav'
   },
   {
     key: 'm',
-    sound: 'filter-flute.wav'
+    sound: 'flute1.wav'
   },
   {
     key: ',', 
-    sound: 'saxophone.wav'
+    sound: 'sax.wav'
   },
   {
     key: '.',
@@ -129,7 +129,7 @@ const sampleSounds = [
   },
   {
     key: '/', 
-    sound: 'soft-kick.wav'
+    sound: 'kick2.wav'
   },
   {
     key: '⎵', 
