@@ -17,7 +17,7 @@ const sampleSounds = [
   },
   {
     key: 't', 
-    sound: 'kick1.wav'
+    sound: 'guitar1.wav'
   },
   {
     key: 'y', 
@@ -93,7 +93,7 @@ const sampleSounds = [
   },
   {
     key: 'z',
-    sound: 'guitar.wav'
+    sound: 'guitar2.wav'
   },
   {
     key: 'x', 
@@ -129,7 +129,7 @@ const sampleSounds = [
   },
   {
     key: '/', 
-    sound: 'kick2.wav'
+    sound: 'kick.wav'
   },
   {
     key: '⎵', 
