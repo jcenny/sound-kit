@@ -1,18 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { sampleSounds } from '../sampleSounds.js';
 import Keyboard from './Keyboard.jsx';
-import styled, { createGlobalStyle } from 'styled-components';
-
-const GlobalStyle = createGlobalStyle`
-  *:focus {
-    outline: none;
-  }
-
-  body {
-    background-color: #8c0dfa;
-    font-family: 'Work Sans', sans-serif;
-  }
-`;
+import { GlobalStyle } from './Styles/AppStyles.jsx';
 
 const App = () => {
   const [firstRowKeys, setFirstRowKeys] = useState([]);
@@ -43,8 +32,8 @@ const App = () => {
     setRows();
     const handleKeyPress = (e) => {
       let audio;
-      if (e.key !== ' ') audio = document.querySelector(`audio[data-key="${e.key}"]`)
-      else audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+      if (e.keyCode !== 32) audio = document.querySelector(`audio[data-key="${e.key}"]`)
+      else audio = document.querySelector(`audio[data-key="⎵"]`)
       if (!audio) return;
       audio.currentTime = 0;
       audio.play();
