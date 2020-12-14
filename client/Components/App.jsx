@@ -42,7 +42,9 @@ const App = () => {
   useEffect(() => {
     setRows();
     const handleKeyPress = (e) => {
-      const audio = document.querySelector(`audio[data-key="${e.key}"]`);
+      let audio;
+      if (e.key !== ' ') audio = document.querySelector(`audio[data-key="${e.key}"]`)
+      else audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
       if (!audio) return;
       audio.currentTime = 0;
       audio.play();

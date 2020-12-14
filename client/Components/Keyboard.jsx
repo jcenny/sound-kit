@@ -15,7 +15,7 @@ const Keyboard = ({ firstRowKeys, secondRowKeys, thirdRowKeys, fourthRowKeys }) 
         {thirdRowKeys.map((set) => <Key set={set} />)}
       </RowContainer>
       <RowContainer width='30%'>
-        {fourthRowKeys.map((set) => <Key width={'400px'} set={set} />)}
+        {fourthRowKeys.map((set) => <Key width={'400px'} keyCode={32} set={set} />)}
       </RowContainer>
     </KeyboardContainer>
   )
