@@ -50,7 +50,11 @@ const App = () => {
     <div style={{height: '650px'}}>
       <GlobalStyle/>
       <h1 style={{textAlign: 'center', color: 'white', letterSpacing: '5px', fontSize: '40px'}}>sound kit</h1>
-      <Keyboard firstRowKeys={firstRowKeys} secondRowKeys={secondRowKeys} thirdRowKeys={thirdRowKeys} fourthRowKeys={fourthRowKeys}/>
+      <Keyboard 
+        firstRowKeys={firstRowKeys} 
+        secondRowKeys={secondRowKeys} 
+        thirdRowKeys={thirdRowKeys} 
+        fourthRowKeys={fourthRowKeys}/>
     </div>
   )
 }

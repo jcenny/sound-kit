@@ -29,7 +29,6 @@ const SoundDesc = styled.div`
   font-size: 14px;
   position: relative;
   top: 10px;
-  color: #b1fffc;
 `
 
 const KeyText = styled.kbd`
